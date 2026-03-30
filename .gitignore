@@ -1,0 +1,17 @@
+.bundle/
+.gem/
+.local/
+.env
+.env.*
+!.env.example
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+/storage/*
+!/storage/.keep
+/vendor/bundle/
+/db/*.sqlite3
+/db/*.sqlite3-journal
+/coverage/
+/node_modules/
