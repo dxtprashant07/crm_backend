@@ -1,0 +1,221 @@
+block in append_cflags: checking for whether -std=c99 is accepted as CFLAGS... -------------------- yes
+
+PATH=".;C:/Ruby32-x64/lib;C:\Ruby32-x64\bin;C:\Ruby32-x64\msys64\ucrt64\bin;C:\Ruby32-x64\msys64\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\prash\bin;C:\Python312\Scripts;C:\Program Files\Eclipse Adoptium\jdk-17.0.18.8-hotspot\bin;C:\Program Files\Eclipse Adoptium\jdk-8.0.482.8-hotspot\bin;S:\OracleXE213_Win64\dbhomeXE\bin;C:\Python312\Scripts\;C:\Python312\;C:\ProgramData\chocolateyC:\Users\prash\AppData\Roaming\Python\Python312\Scripts.;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files\Git LFS;C:\Strawberry\c\bin;C:\Strawberry\perl\site\bin;C:\Strawberry\perl\bin;S:\PostgreSQL\bin;C:\Users\prash\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\prash\AppData\Local\Programs\Python\Python311\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\prash\tools\apache-maven-3.9.9\bin;c:\Users\prash\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\debugCommand;c:\Users\prash\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\copilotCli;C:\Program Files\Eclipse Adoptium\jdk-8.0.482.8-hotspot\bin;S:\OracleXE213_Win64\dbhomeXE\bin;C:\Python312\Scripts\;C:\Python312\;C:\ProgramData\chocolateyC:\Users\prash\AppData\Roaming\Python\Python312\Scripts.;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files\Git LFS;C:\Strawberry\c\bin;C:\Strawberry\perl\site\bin;C:\Strawberry\perl\bin;S:\PostgreSQL\bin;C:\Users\prash\AppData\Local\Programs\Eclipse Adoptium\jdk-25.0.1.8-hotspot\bin;C:\Users\prash\AppData\Local\Microsoft\WindowsApps;C:\Users\prash\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\prash\AppData\Roaming\npm;C:\Users\prash\AppData\Local\Programs\Ollama;S:\cursor\resources" "gcc -o conftest.exe -IC:/Ruby32-x64/include/ruby-3.2.0/x64-mingw-ucrt -IC:/Ruby32-x64/include/ruby-3.2.0/ruby/backward -IC:/Ruby32-x64/include/ruby-3.2.0 -I.  -DFD_SETSIZE=2048 -D_WIN32_WINNT=0x0600 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64  -O3 -fno-fast-math -fstack-protector-strong conftest.c  -L. -LC:/Ruby32-x64/lib -L. -pipe -s -fstack-protector-strong -Wl,--no-as-needed  -m64   -lx64-ucrt-ruby320  -lshell32 -lws2_32 -liphlpapi -limagehlp -lshlwapi -lbcrypt  "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <winsock2.h>
+4: #include <windows.h>
+5: int main(int argc, char **argv)
+6: {
+7:   return !!argv[argc];
+8: }
+/* end */
+
+PATH=".;C:/Ruby32-x64/lib;C:\Ruby32-x64\bin;C:\Ruby32-x64\msys64\ucrt64\bin;C:\Ruby32-x64\msys64\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\prash\bin;C:\Python312\Scripts;C:\Program Files\Eclipse Adoptium\jdk-17.0.18.8-hotspot\bin;C:\Program Files\Eclipse Adoptium\jdk-8.0.482.8-hotspot\bin;S:\OracleXE213_Win64\dbhomeXE\bin;C:\Python312\Scripts\;C:\Python312\;C:\ProgramData\chocolateyC:\Users\prash\AppData\Roaming\Python\Python312\Scripts.;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files\Git LFS;C:\Strawberry\c\bin;C:\Strawberry\perl\site\bin;C:\Strawberry\perl\bin;S:\PostgreSQL\bin;C:\Users\prash\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\prash\AppData\Local\Programs\Python\Python311\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\prash\tools\apache-maven-3.9.9\bin;c:\Users\prash\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\debugCommand;c:\Users\prash\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\copilotCli;C:\Program Files\Eclipse Adoptium\jdk-8.0.482.8-hotspot\bin;S:\OracleXE213_Win64\dbhomeXE\bin;C:\Python312\Scripts\;C:\Python312\;C:\ProgramData\chocolateyC:\Users\prash\AppData\Roaming\Python\Python312\Scripts.;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files\Git LFS;C:\Strawberry\c\bin;C:\Strawberry\perl\site\bin;C:\Strawberry\perl\bin;S:\PostgreSQL\bin;C:\Users\prash\AppData\Local\Programs\Eclipse Adoptium\jdk-25.0.1.8-hotspot\bin;C:\Users\prash\AppData\Local\Microsoft\WindowsApps;C:\Users\prash\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\prash\AppData\Roaming\npm;C:\Users\prash\AppData\Local\Programs\Ollama;S:\cursor\resources" "gcc -IC:/Ruby32-x64/include/ruby-3.2.0/x64-mingw-ucrt -IC:/Ruby32-x64/include/ruby-3.2.0/ruby/backward -IC:/Ruby32-x64/include/ruby-3.2.0 -I.  -DFD_SETSIZE=2048 -D_WIN32_WINNT=0x0600 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64  -O3 -fno-fast-math -fstack-protector-strong -m64 -std=c99 -Werror -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <winsock2.h>
+4: #include <windows.h>
+5: int main(int argc, char **argv)
+6: {
+7:   return !!argv[argc];
+8: }
+/* end */
+
+--------------------
+
+block in append_cflags: checking for whether -Wno-declaration-after-statement is accepted as CFLAGS... -------------------- yes
+
+PATH=".;C:/Ruby32-x64/lib;C:\Ruby32-x64\bin;C:\Ruby32-x64\msys64\ucrt64\bin;C:\Ruby32-x64\msys64\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\prash\bin;C:\Python312\Scripts;C:\Program Files\Eclipse Adoptium\jdk-17.0.18.8-hotspot\bin;C:\Program Files\Eclipse Adoptium\jdk-8.0.482.8-hotspot\bin;S:\OracleXE213_Win64\dbhomeXE\bin;C:\Python312\Scripts\;C:\Python312\;C:\ProgramData\chocolateyC:\Users\prash\AppData\Roaming\Python\Python312\Scripts.;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files\Git LFS;C:\Strawberry\c\bin;C:\Strawberry\perl\site\bin;C:\Strawberry\perl\bin;S:\PostgreSQL\bin;C:\Users\prash\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\prash\AppData\Local\Programs\Python\Python311\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\prash\tools\apache-maven-3.9.9\bin;c:\Users\prash\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\debugCommand;c:\Users\prash\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\copilotCli;C:\Program Files\Eclipse Adoptium\jdk-8.0.482.8-hotspot\bin;S:\OracleXE213_Win64\dbhomeXE\bin;C:\Python312\Scripts\;C:\Python312\;C:\ProgramData\chocolateyC:\Users\prash\AppData\Roaming\Python\Python312\Scripts.;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files\Git LFS;C:\Strawberry\c\bin;C:\Strawberry\perl\site\bin;C:\Strawberry\perl\bin;S:\PostgreSQL\bin;C:\Users\prash\AppData\Local\Programs\Eclipse Adoptium\jdk-25.0.1.8-hotspot\bin;C:\Users\prash\AppData\Local\Microsoft\WindowsApps;C:\Users\prash\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\prash\AppData\Roaming\npm;C:\Users\prash\AppData\Local\Programs\Ollama;S:\cursor\resources" "gcc -IC:/Ruby32-x64/include/ruby-3.2.0/x64-mingw-ucrt -IC:/Ruby32-x64/include/ruby-3.2.0/ruby/backward -IC:/Ruby32-x64/include/ruby-3.2.0 -I.  -DFD_SETSIZE=2048 -D_WIN32_WINNT=0x0600 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64  -O3 -fno-fast-math -fstack-protector-strong -std=c99 -m64 -Wno-declaration-after-statement -Werror -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <winsock2.h>
+4: #include <windows.h>
+5: int main(int argc, char **argv)
+6: {
+7:   return !!argv[argc];
+8: }
+/* end */
+
+--------------------
+
+block in append_cflags: checking for whether -O2 is accepted as CFLAGS... -------------------- yes
+
+PATH=".;C:/Ruby32-x64/lib;C:\Ruby32-x64\bin;C:\Ruby32-x64\msys64\ucrt64\bin;C:\Ruby32-x64\msys64\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\prash\bin;C:\Python312\Scripts;C:\Program Files\Eclipse Adoptium\jdk-17.0.18.8-hotspot\bin;C:\Program Files\Eclipse Adoptium\jdk-8.0.482.8-hotspot\bin;S:\OracleXE213_Win64\dbhomeXE\bin;C:\Python312\Scripts\;C:\Python312\;C:\ProgramData\chocolateyC:\Users\prash\AppData\Roaming\Python\Python312\Scripts.;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files\Git LFS;C:\Strawberry\c\bin;C:\Strawberry\perl\site\bin;C:\Strawberry\perl\bin;S:\PostgreSQL\bin;C:\Users\prash\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\prash\AppData\Local\Programs\Python\Python311\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\prash\tools\apache-maven-3.9.9\bin;c:\Users\prash\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\debugCommand;c:\Users\prash\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\copilotCli;C:\Program Files\Eclipse Adoptium\jdk-8.0.482.8-hotspot\bin;S:\OracleXE213_Win64\dbhomeXE\bin;C:\Python312\Scripts\;C:\Python312\;C:\ProgramData\chocolateyC:\Users\prash\AppData\Roaming\Python\Python312\Scripts.;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files\Git LFS;C:\Strawberry\c\bin;C:\Strawberry\perl\site\bin;C:\Strawberry\perl\bin;S:\PostgreSQL\bin;C:\Users\prash\AppData\Local\Programs\Eclipse Adoptium\jdk-25.0.1.8-hotspot\bin;C:\Users\prash\AppData\Local\Microsoft\WindowsApps;C:\Users\prash\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\prash\AppData\Roaming\npm;C:\Users\prash\AppData\Local\Programs\Ollama;S:\cursor\resources" "gcc -IC:/Ruby32-x64/include/ruby-3.2.0/x64-mingw-ucrt -IC:/Ruby32-x64/include/ruby-3.2.0/ruby/backward -IC:/Ruby32-x64/include/ruby-3.2.0 -I.  -DFD_SETSIZE=2048 -D_WIN32_WINNT=0x0600 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64  -O3 -fno-fast-math -fstack-protector-strong -std=c99 -Wno-declaration-after-statement -m64 -O2 -Werror -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <winsock2.h>
+4: #include <windows.h>
+5: int main(int argc, char **argv)
+6: {
+7:   return !!argv[argc];
+8: }
+/* end */
+
+--------------------
+
+block in append_cflags: checking for whether -g is accepted as CFLAGS... -------------------- yes
+
+PATH=".;C:/Ruby32-x64/lib;C:\Ruby32-x64\bin;C:\Ruby32-x64\msys64\ucrt64\bin;C:\Ruby32-x64\msys64\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\prash\bin;C:\Python312\Scripts;C:\Program Files\Eclipse Adoptium\jdk-17.0.18.8-hotspot\bin;C:\Program Files\Eclipse Adoptium\jdk-8.0.482.8-hotspot\bin;S:\OracleXE213_Win64\dbhomeXE\bin;C:\Python312\Scripts\;C:\Python312\;C:\ProgramData\chocolateyC:\Users\prash\AppData\Roaming\Python\Python312\Scripts.;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files\Git LFS;C:\Strawberry\c\bin;C:\Strawberry\perl\site\bin;C:\Strawberry\perl\bin;S:\PostgreSQL\bin;C:\Users\prash\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\prash\AppData\Local\Programs\Python\Python311\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\prash\tools\apache-maven-3.9.9\bin;c:\Users\prash\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\debugCommand;c:\Users\prash\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\copilotCli;C:\Program Files\Eclipse Adoptium\jdk-8.0.482.8-hotspot\bin;S:\OracleXE213_Win64\dbhomeXE\bin;C:\Python312\Scripts\;C:\Python312\;C:\ProgramData\chocolateyC:\Users\prash\AppData\Roaming\Python\Python312\Scripts.;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files\Git LFS;C:\Strawberry\c\bin;C:\Strawberry\perl\site\bin;C:\Strawberry\perl\bin;S:\PostgreSQL\bin;C:\Users\prash\AppData\Local\Programs\Eclipse Adoptium\jdk-25.0.1.8-hotspot\bin;C:\Users\prash\AppData\Local\Microsoft\WindowsApps;C:\Users\prash\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\prash\AppData\Roaming\npm;C:\Users\prash\AppData\Local\Programs\Ollama;S:\cursor\resources" "gcc -IC:/Ruby32-x64/include/ruby-3.2.0/x64-mingw-ucrt -IC:/Ruby32-x64/include/ruby-3.2.0/ruby/backward -IC:/Ruby32-x64/include/ruby-3.2.0 -I.  -DFD_SETSIZE=2048 -D_WIN32_WINNT=0x0600 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64  -O3 -fno-fast-math -fstack-protector-strong -std=c99 -Wno-declaration-after-statement -O2 -m64 -g -Werror -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <winsock2.h>
+4: #include <windows.h>
+5: int main(int argc, char **argv)
+6: {
+7:   return !!argv[argc];
+8: }
+/* end */
+
+--------------------
+
+block in append_cflags: checking for whether -Winline is accepted as CFLAGS... -------------------- yes
+
+PATH=".;C:/Ruby32-x64/lib;C:\Ruby32-x64\bin;C:\Ruby32-x64\msys64\ucrt64\bin;C:\Ruby32-x64\msys64\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\prash\bin;C:\Python312\Scripts;C:\Program Files\Eclipse Adoptium\jdk-17.0.18.8-hotspot\bin;C:\Program Files\Eclipse Adoptium\jdk-8.0.482.8-hotspot\bin;S:\OracleXE213_Win64\dbhomeXE\bin;C:\Python312\Scripts\;C:\Python312\;C:\ProgramData\chocolateyC:\Users\prash\AppData\Roaming\Python\Python312\Scripts.;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files\Git LFS;C:\Strawberry\c\bin;C:\Strawberry\perl\site\bin;C:\Strawberry\perl\bin;S:\PostgreSQL\bin;C:\Users\prash\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\prash\AppData\Local\Programs\Python\Python311\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\prash\tools\apache-maven-3.9.9\bin;c:\Users\prash\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\debugCommand;c:\Users\prash\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\copilotCli;C:\Program Files\Eclipse Adoptium\jdk-8.0.482.8-hotspot\bin;S:\OracleXE213_Win64\dbhomeXE\bin;C:\Python312\Scripts\;C:\Python312\;C:\ProgramData\chocolateyC:\Users\prash\AppData\Roaming\Python\Python312\Scripts.;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files\Git LFS;C:\Strawberry\c\bin;C:\Strawberry\perl\site\bin;C:\Strawberry\perl\bin;S:\PostgreSQL\bin;C:\Users\prash\AppData\Local\Programs\Eclipse Adoptium\jdk-25.0.1.8-hotspot\bin;C:\Users\prash\AppData\Local\Microsoft\WindowsApps;C:\Users\prash\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\prash\AppData\Roaming\npm;C:\Users\prash\AppData\Local\Programs\Ollama;S:\cursor\resources" "gcc -IC:/Ruby32-x64/include/ruby-3.2.0/x64-mingw-ucrt -IC:/Ruby32-x64/include/ruby-3.2.0/ruby/backward -IC:/Ruby32-x64/include/ruby-3.2.0 -I.  -DFD_SETSIZE=2048 -D_WIN32_WINNT=0x0600 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64  -O3 -fno-fast-math -fstack-protector-strong -std=c99 -Wno-declaration-after-statement -O2 -g -m64 -Winline -Werror -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <winsock2.h>
+4: #include <windows.h>
+5: int main(int argc, char **argv)
+6: {
+7:   return !!argv[argc];
+8: }
+/* end */
+
+--------------------
+
+block in append_cflags: checking for whether -Wmissing-noreturn is accepted as CFLAGS... -------------------- yes
+
+PATH=".;C:/Ruby32-x64/lib;C:\Ruby32-x64\bin;C:\Ruby32-x64\msys64\ucrt64\bin;C:\Ruby32-x64\msys64\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\prash\bin;C:\Python312\Scripts;C:\Program Files\Eclipse Adoptium\jdk-17.0.18.8-hotspot\bin;C:\Program Files\Eclipse Adoptium\jdk-8.0.482.8-hotspot\bin;S:\OracleXE213_Win64\dbhomeXE\bin;C:\Python312\Scripts\;C:\Python312\;C:\ProgramData\chocolateyC:\Users\prash\AppData\Roaming\Python\Python312\Scripts.;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files\Git LFS;C:\Strawberry\c\bin;C:\Strawberry\perl\site\bin;C:\Strawberry\perl\bin;S:\PostgreSQL\bin;C:\Users\prash\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\prash\AppData\Local\Programs\Python\Python311\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\prash\tools\apache-maven-3.9.9\bin;c:\Users\prash\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\debugCommand;c:\Users\prash\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\copilotCli;C:\Program Files\Eclipse Adoptium\jdk-8.0.482.8-hotspot\bin;S:\OracleXE213_Win64\dbhomeXE\bin;C:\Python312\Scripts\;C:\Python312\;C:\ProgramData\chocolateyC:\Users\prash\AppData\Roaming\Python\Python312\Scripts.;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files\Git LFS;C:\Strawberry\c\bin;C:\Strawberry\perl\site\bin;C:\Strawberry\perl\bin;S:\PostgreSQL\bin;C:\Users\prash\AppData\Local\Programs\Eclipse Adoptium\jdk-25.0.1.8-hotspot\bin;C:\Users\prash\AppData\Local\Microsoft\WindowsApps;C:\Users\prash\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\prash\AppData\Roaming\npm;C:\Users\prash\AppData\Local\Programs\Ollama;S:\cursor\resources" "gcc -IC:/Ruby32-x64/include/ruby-3.2.0/x64-mingw-ucrt -IC:/Ruby32-x64/include/ruby-3.2.0/ruby/backward -IC:/Ruby32-x64/include/ruby-3.2.0 -I.  -DFD_SETSIZE=2048 -D_WIN32_WINNT=0x0600 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64  -O3 -fno-fast-math -fstack-protector-strong -std=c99 -Wno-declaration-after-statement -O2 -g -Winline -m64 -Wmissing-noreturn -Werror -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <winsock2.h>
+4: #include <windows.h>
+5: int main(int argc, char **argv)
+6: {
+7:   return !!argv[argc];
+8: }
+/* end */
+
+--------------------
+
+block in append_cflags: checking for whether -Wconversion is accepted as CFLAGS... -------------------- no
+
+PATH=".;C:/Ruby32-x64/lib;C:\Ruby32-x64\bin;C:\Ruby32-x64\msys64\ucrt64\bin;C:\Ruby32-x64\msys64\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\prash\bin;C:\Python312\Scripts;C:\Program Files\Eclipse Adoptium\jdk-17.0.18.8-hotspot\bin;C:\Program Files\Eclipse Adoptium\jdk-8.0.482.8-hotspot\bin;S:\OracleXE213_Win64\dbhomeXE\bin;C:\Python312\Scripts\;C:\Python312\;C:\ProgramData\chocolateyC:\Users\prash\AppData\Roaming\Python\Python312\Scripts.;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files\Git LFS;C:\Strawberry\c\bin;C:\Strawberry\perl\site\bin;C:\Strawberry\perl\bin;S:\PostgreSQL\bin;C:\Users\prash\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\prash\AppData\Local\Programs\Python\Python311\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\prash\tools\apache-maven-3.9.9\bin;c:\Users\prash\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\debugCommand;c:\Users\prash\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\copilotCli;C:\Program Files\Eclipse Adoptium\jdk-8.0.482.8-hotspot\bin;S:\OracleXE213_Win64\dbhomeXE\bin;C:\Python312\Scripts\;C:\Python312\;C:\ProgramData\chocolateyC:\Users\prash\AppData\Roaming\Python\Python312\Scripts.;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files\Git LFS;C:\Strawberry\c\bin;C:\Strawberry\perl\site\bin;C:\Strawberry\perl\bin;S:\PostgreSQL\bin;C:\Users\prash\AppData\Local\Programs\Eclipse Adoptium\jdk-25.0.1.8-hotspot\bin;C:\Users\prash\AppData\Local\Microsoft\WindowsApps;C:\Users\prash\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\prash\AppData\Roaming\npm;C:\Users\prash\AppData\Local\Programs\Ollama;S:\cursor\resources" "gcc -IC:/Ruby32-x64/include/ruby-3.2.0/x64-mingw-ucrt -IC:/Ruby32-x64/include/ruby-3.2.0/ruby/backward -IC:/Ruby32-x64/include/ruby-3.2.0 -I.  -DFD_SETSIZE=2048 -D_WIN32_WINNT=0x0600 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64  -O3 -fno-fast-math -fstack-protector-strong -std=c99 -Wno-declaration-after-statement -O2 -g -Winline -Wmissing-noreturn -m64 -Wconversion -Werror -c conftest.c"
+In file included from C:/Ruby32-x64/include/ruby-3.2.0/ruby/internal/arithmetic/long.h:42,
+                 from C:/Ruby32-x64/include/ruby-3.2.0/ruby/internal/arithmetic/int.h:26,
+                 from C:/Ruby32-x64/include/ruby-3.2.0/ruby/internal/arithmetic/char.h:23,
+                 from C:/Ruby32-x64/include/ruby-3.2.0/ruby/internal/arithmetic.h:24,
+                 from C:/Ruby32-x64/include/ruby-3.2.0/ruby/ruby.h:28,
+                 from C:/Ruby32-x64/include/ruby-3.2.0/ruby.h:38,
+                 from conftest.c:1:
+C:/Ruby32-x64/include/ruby-3.2.0/ruby/internal/special_consts.h: In function 'RB_TEST':
+C:/Ruby32-x64/include/ruby-3.2.0/ruby/internal/special_consts.h:159:16: error: unsigned conversion from 'int' to 'VALUE' {aka 'long long unsigned int'} changes value from '-5' to '18446744073709551611' [-Werror=sign-conversion]
+  159 |     return obj & ~RUBY_Qnil;
+      |                ^
+C:/Ruby32-x64/include/ruby-3.2.0/ruby/internal/special_consts.h: In function 'RB_NIL_OR_UNDEF_P':
+C:/Ruby32-x64/include/ruby-3.2.0/ruby/internal/special_consts.h:229:24: error: unsigned conversion from 'int' to 'VALUE' {aka 'const long long unsigned int'} changes value from '-33' to '18446744073709551583' [-Werror=sign-conversion]
+  229 |     const VALUE mask = ~(RUBY_Qundef ^ RUBY_Qnil);
+      |                        ^
+C:/Ruby32-x64/include/ruby-3.2.0/ruby/internal/arithmetic/long.h: In function 'RB_INT2FIX':
+C:/Ruby32-x64/include/ruby-3.2.0/ruby/internal/arithmetic/long.h:117:29: error: conversion to 'long unsigned int' from 'long int' may change the sign of the result [-Werror=sign-conversion]
+  117 |     const unsigned long j = i;
+      |                             ^
+C:/Ruby32-x64/include/ruby-3.2.0/ruby/internal/arithmetic/long.h:119:29: error: conversion to 'long int' from 'long unsigned int' may change the sign of the result [-Werror=sign-conversion]
+  119 |     const long          l = k;
+      |                             ^
+C:/Ruby32-x64/include/ruby-3.2.0/ruby/internal/arithmetic/long.h:121:29: error: conversion to 'VALUE' {aka 'const long long unsigned int'} from 'long long int' may change the sign of the result [-Werror=sign-conversion]
+  121 |     const VALUE         n = m;
+      |                             ^
+C:/Ruby32-x64/include/ruby-3.2.0/ruby/internal/arithmetic/long.h: In function 'rbimpl_fix2long_by_idiv':
+C:/Ruby32-x64/include/ruby-3.2.0/ruby/internal/arithmetic/long.h:169:28: error: conversion to 'long long int' from 'VALUE' {aka 'long long unsigned int'} may change the sign of the result [-Werror=sign-conversion]
+  169 |     const SIGNED_VALUE y = x - RUBY_FIXNUM_FLAG;
+      |                            ^
+C:/Ruby32-x64/include/ruby-3.2.0/ruby/internal/arithmetic/long.h: In function 'rbimpl_fix2long_by_shift':
+C:/Ruby32-x64/include/ruby-3.2.0/ruby/internal/arithmetic/long.h:196:28: error: conversion to 'long long int' from 'VALUE' {aka 'long long unsigned int'} may change the sign of the result [-Werror=sign-conversion]
+  196 |     const SIGNED_VALUE y = x;
+      |                            ^
+C:/Ruby32-x64/include/ruby-3.2.0/ruby/internal/arithmetic/long.h: In function 'rb_fix2ulong':
+C:/Ruby32-x64/include/ruby-3.2.0/ruby/internal/arithmetic/long.h:255:12: error: conversion to 'long unsigned int' from 'long int' may change the sign of the result [-Werror=sign-conversion]
+  255 |     return rb_fix2long(x);
+      |            ^~~~~~~~~~~~~~
+C:/Ruby32-x64/include/ruby-3.2.0/ruby/internal/arithmetic/long.h: In function 'rb_ulong2num_inline':
+C:/Ruby32-x64/include/ruby-3.2.0/ruby/internal/arithmetic/long.h:326:28: error: conversion to 'long int' from 'long unsigned int' may change the sign of the result [-Werror=sign-conversion]
+  326 |         return RB_LONG2FIX(v);
+      |                            ^
+C:/Ruby32-x64/include/ruby-3.2.0/ruby/internal/arithmetic/int.h: In function 'rb_uint2num_inline':
+C:/Ruby32-x64/include/ruby-3.2.0/ruby/internal/arithmetic/int.h:257:28: error: conversion to 'long int' from 'unsigned int' may change the sign of the result [-Werror=sign-conversion]
+  257 |         return RB_LONG2FIX(v);
+      |                            ^
+C:/Ruby32-x64/include/ruby-3.2.0/ruby/internal/arithmetic/long_long.h: In function 'rb_num2ull_inline':
+C:/Ruby32-x64/include/ruby-3.2.0/ruby/internal/arithmetic/long.h:53:22: error: conversion to 'long long unsigned int' from 'long int' may change the sign of the result [-Werror=sign-conversion]
+   53 | #define RB_FIX2LONG  rb_fix2long          /**< @alias{rb_fix2long} */
+C:/Ruby32-x64/include/ruby-3.2.0/ruby/internal/arithmetic/long_long.h:130:16: note: in expansion of macro 'RB_FIX2LONG'
+  130 |         return RB_FIX2LONG(x);
+      |                ^~~~~~~~~~~
+In file included from C:/Ruby32-x64/include/ruby-3.2.0/ruby/internal/arithmetic.h:37:
+C:/Ruby32-x64/include/ruby-3.2.0/ruby/internal/arithmetic/st_data_t.h: In function 'RB_ST2FIX':
+C:/Ruby32-x64/include/ruby-3.2.0/ruby/internal/arithmetic/st_data_t.h:61:22: error: conversion to 'long long int' from 'st_data_t' {aka 'long long unsigned int'} may change the sign of the result [-Werror=sign-conversion]
+   61 |     SIGNED_VALUE x = i;
+      |                      ^
+C:/Ruby32-x64/include/ruby-3.2.0/ruby/internal/arithmetic/st_data_t.h:72:24: error: conversion to 'long int' from 'long unsigned int' may change the sign of the result [-Werror=sign-conversion]
+   72 |     return RB_LONG2FIX(y);
+      |                        ^
+In file included from C:/Ruby32-x64/include/ruby-3.2.0/ruby/ruby.h:42:
+C:/Ruby32-x64/include/ruby-3.2.0/ruby/internal/memory.h: In function 'rb_alloc_tmp_buffer2':
+C:/Ruby32-x64/include/ruby-3.2.0/ruby/internal/memory.h:642:56: error: conversion to 'size_t' {aka 'long long unsigned int'} from 'long int' may change the sign of the result [-Werror=sign-conversion]
+  642 |     const size_t total_size = rbimpl_size_mul_or_raise(count, elsize);
+      |                                                        ^~~~~
+In file included from C:/Ruby32-x64/include/ruby-3.2.0/ruby/internal/intern/select.h:37,
+                 from C:/Ruby32-x64/include/ruby-3.2.0/ruby/intern.h:54,
+                 from C:/Ruby32-x64/include/ruby-3.2.0/ruby/ruby.h:193:
+C:/Ruby32-x64/include/ruby-3.2.0/ruby/internal/intern/select/win32.h: In function 'rb_fd_max':
+C:/Ruby32-x64/include/ruby-3.2.0/ruby/internal/intern/select/win32.h:256:13: error: conversion to 'int' from 'u_int' {aka 'unsigned int'} may change the sign of the result [-Werror=sign-conversion]
+  256 |     return p->fd_count;
+      |            ~^~~~~~~~~~
+cc1.exe: all warnings being treated as errors
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <winsock2.h>
+4: #include <windows.h>
+5: int main(int argc, char **argv)
+6: {
+7:   return !!argv[argc];
+8: }
+/* end */
+
+--------------------
+
+block in append_cppflags: checking for whether  "-Idummypath" is accepted as CPPFLAGS... -------------------- yes
+
+PATH=".;C:/Ruby32-x64/lib;C:\Ruby32-x64\bin;C:\Ruby32-x64\msys64\ucrt64\bin;C:\Ruby32-x64\msys64\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\prash\bin;C:\Python312\Scripts;C:\Program Files\Eclipse Adoptium\jdk-17.0.18.8-hotspot\bin;C:\Program Files\Eclipse Adoptium\jdk-8.0.482.8-hotspot\bin;S:\OracleXE213_Win64\dbhomeXE\bin;C:\Python312\Scripts\;C:\Python312\;C:\ProgramData\chocolateyC:\Users\prash\AppData\Roaming\Python\Python312\Scripts.;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files\Git LFS;C:\Strawberry\c\bin;C:\Strawberry\perl\site\bin;C:\Strawberry\perl\bin;S:\PostgreSQL\bin;C:\Users\prash\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\prash\AppData\Local\Programs\Python\Python311\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\prash\tools\apache-maven-3.9.9\bin;c:\Users\prash\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\debugCommand;c:\Users\prash\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\copilotCli;C:\Program Files\Eclipse Adoptium\jdk-8.0.482.8-hotspot\bin;S:\OracleXE213_Win64\dbhomeXE\bin;C:\Python312\Scripts\;C:\Python312\;C:\ProgramData\chocolateyC:\Users\prash\AppData\Roaming\Python\Python312\Scripts.;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files\Git LFS;C:\Strawberry\c\bin;C:\Strawberry\perl\site\bin;C:\Strawberry\perl\bin;S:\PostgreSQL\bin;C:\Users\prash\AppData\Local\Programs\Eclipse Adoptium\jdk-25.0.1.8-hotspot\bin;C:\Users\prash\AppData\Local\Microsoft\WindowsApps;C:\Users\prash\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\prash\AppData\Roaming\npm;C:\Users\prash\AppData\Local\Programs\Ollama;S:\cursor\resources" "gcc -IC:/Ruby32-x64/include/ruby-3.2.0/x64-mingw-ucrt -IC:/Ruby32-x64/include/ruby-3.2.0/ruby/backward -IC:/Ruby32-x64/include/ruby-3.2.0 -I.  -DFD_SETSIZE=2048 -D_WIN32_WINNT=0x0600 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64  -O3 -fno-fast-math -fstack-protector-strong -std=c99 -Wno-declaration-after-statement -O2 -g -Winline -Wmissing-noreturn -m64  "-Idummypath" -Werror -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <winsock2.h>
+4: #include <windows.h>
+5: int main(int argc, char **argv)
+6: {
+7:   return !!argv[argc];
+8: }
+/* end */
+
+--------------------
+

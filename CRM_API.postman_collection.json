@@ -1,0 +1,301 @@
+{
+  "info": {
+    "name": "CRM Backend API",
+    "description": "Complete Postman collection for the CRM REST API built with Ruby on Rails.\n\n## Setup\n1. Import this collection\n2. Set the `base_url` variable to `http://localhost:3000/api/v1`\n3. Run **Auth > Login** first — token is saved automatically\n4. All other requests use the saved token",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "base_url", "value": "http://localhost:3000/api/v1" },
+    { "key": "token",    "value": "" }
+  ],
+  "item": [
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "Signup",
+          "request": {
+            "method": "POST",
+            "url": "{{base_url}}/auth/signup",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Prashant Dixit\",\n  \"email\": \"prashant@example.com\",\n  \"password\": \"password123\",\n  \"password_confirmation\": \"password123\",\n  \"role\": \"agent\"\n}"
+            }
+          },
+          "event": [{
+            "listen": "test",
+            "script": { "exec": [
+              "if (pm.response.code === 201) {",
+              "  pm.collectionVariables.set('token', pm.response.json().token);",
+              "  console.log('Token saved!');",
+              "}"
+            ]}
+          }]
+        },
+        {
+          "name": "Login",
+          "request": {
+            "method": "POST",
+            "url": "{{base_url}}/auth/login",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"agent1@crm.com\",\n  \"password\": \"password123\"\n}"
+            }
+          },
+          "event": [{
+            "listen": "test",
+            "script": { "exec": [
+              "if (pm.response.code === 200) {",
+              "  pm.collectionVariables.set('token', pm.response.json().token);",
+              "  console.log('Logged in! Token saved.');",
+              "}"
+            ]}
+          }]
+        },
+        {
+          "name": "Get Current User",
+          "request": {
+            "method": "GET",
+            "url": "{{base_url}}/auth/me",
+            "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Contacts",
+      "item": [
+        {
+          "name": "List Contacts",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{base_url}}/contacts?page=1&per_page=10",
+              "query": [
+                { "key": "page",     "value": "1" },
+                { "key": "per_page", "value": "10" },
+                { "key": "q",        "value": "",    "disabled": true },
+                { "key": "status",   "value": "lead","disabled": true }
+              ]
+            },
+            "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }]
+          }
+        },
+        {
+          "name": "Get Contact",
+          "request": {
+            "method": "GET",
+            "url": "{{base_url}}/contacts/1",
+            "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }]
+          }
+        },
+        {
+          "name": "Create Contact",
+          "request": {
+            "method": "POST",
+            "url": "{{base_url}}/contacts",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{token}}" },
+              { "key": "Content-Type",  "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"first_name\": \"Rahul\",\n  \"last_name\": \"Verma\",\n  \"email\": \"rahul.verma@example.com\",\n  \"phone\": \"9876543210\",\n  \"job_title\": \"CTO\",\n  \"status\": \"lead\",\n  \"source\": \"referral\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Update Contact",
+          "request": {
+            "method": "PUT",
+            "url": "{{base_url}}/contacts/1",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{token}}" },
+              { "key": "Content-Type",  "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"status\": \"prospect\",\n  \"job_title\": \"VP Engineering\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Delete Contact",
+          "request": {
+            "method": "DELETE",
+            "url": "{{base_url}}/contacts/1",
+            "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }]
+          }
+        },
+        {
+          "name": "Contact's Deals",
+          "request": {
+            "method": "GET",
+            "url": "{{base_url}}/contacts/1/deals",
+            "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }]
+          }
+        },
+        {
+          "name": "Contact's Activities",
+          "request": {
+            "method": "GET",
+            "url": "{{base_url}}/contacts/1/activities",
+            "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Companies",
+      "item": [
+        {
+          "name": "List Companies",
+          "request": {
+            "method": "GET",
+            "url": "{{base_url}}/companies",
+            "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }]
+          }
+        },
+        {
+          "name": "Create Company",
+          "request": {
+            "method": "POST",
+            "url": "{{base_url}}/companies",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{token}}" },
+              { "key": "Content-Type",  "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"TechNova Solutions\",\n  \"industry\": \"Software\",\n  \"website\": \"https://technova.io\",\n  \"city\": \"Bangalore\",\n  \"country\": \"India\",\n  \"size\": \"large\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Get Company",
+          "request": {
+            "method": "GET",
+            "url": "{{base_url}}/companies/1",
+            "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }]
+          }
+        },
+        {
+          "name": "Company's Contacts",
+          "request": {
+            "method": "GET",
+            "url": "{{base_url}}/companies/1/contacts",
+            "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Deals",
+      "item": [
+        {
+          "name": "List Deals (with pipeline)",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{base_url}}/deals?page=1",
+              "query": [
+                { "key": "page",     "value": "1" },
+                { "key": "stage",    "value": "proposal", "disabled": true },
+                { "key": "owner_id", "value": "1",        "disabled": true }
+              ]
+            },
+            "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }]
+          }
+        },
+        {
+          "name": "Create Deal",
+          "request": {
+            "method": "POST",
+            "url": "{{base_url}}/deals",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{token}}" },
+              { "key": "Content-Type",  "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Enterprise License Deal\",\n  \"value\": 450000,\n  \"stage\": \"proposal\",\n  \"probability\": 50,\n  \"contact_id\": 1,\n  \"company_id\": 1,\n  \"expected_close_date\": \"2025-06-30\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Update Deal Stage",
+          "request": {
+            "method": "PATCH",
+            "url": "{{base_url}}/deals/1/update_stage",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{token}}" },
+              { "key": "Content-Type",  "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"stage\": \"negotiation\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Get Deal",
+          "request": {
+            "method": "GET",
+            "url": "{{base_url}}/deals/1",
+            "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Activities",
+      "item": [
+        {
+          "name": "List Activities",
+          "request": {
+            "method": "GET",
+            "url": {
+              "raw": "{{base_url}}/activities",
+              "query": [
+                { "key": "activity_type", "value": "call",  "disabled": true },
+                { "key": "contact_id",    "value": "1",     "disabled": true },
+                { "key": "deal_id",       "value": "1",     "disabled": true }
+              ]
+            },
+            "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }]
+          }
+        },
+        {
+          "name": "Log Activity",
+          "request": {
+            "method": "POST",
+            "url": "{{base_url}}/activities",
+            "header": [
+              { "key": "Authorization", "value": "Bearer {{token}}" },
+              { "key": "Content-Type",  "value": "application/json" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"activity_type\": \"call\",\n  \"subject\": \"Discovery call with prospect\",\n  \"description\": \"Discussed product requirements and timeline\",\n  \"contact_id\": 1,\n  \"deal_id\": 1,\n  \"completed\": true\n}"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Dashboard",
+      "item": [
+        {
+          "name": "Get Stats",
+          "request": {
+            "method": "GET",
+            "url": "{{base_url}}/dashboard/stats",
+            "header": [{ "key": "Authorization", "value": "Bearer {{token}}" }]
+          }
+        }
+      ]
+    }
+  ]
+}

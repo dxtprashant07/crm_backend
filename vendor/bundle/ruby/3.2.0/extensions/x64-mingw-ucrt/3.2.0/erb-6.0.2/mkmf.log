@@ -1,0 +1,40 @@
+have_func: checking for rb_ext_ractor_safe() in ruby.h... -------------------- yes
+
+PATH=".;C:/Ruby32-x64/lib;C:\Ruby32-x64\bin;C:\Ruby32-x64\msys64\ucrt64\bin;C:\Ruby32-x64\msys64\usr\bin;C:\Users\prash\OneDrive\Desktop\CRM_Project_Fixed\crm_backend_fixed\crm_fixed_backend\.gem\bin;C:\Ruby32-x64\bin;C:\Users\prash\.codex\tmp\arg0\codex-arg0iFSOyr;C:\Program Files\Eclipse Adoptium\jdk-17.0.18.8-hotspot\bin;C:\Program Files\Eclipse Adoptium\jdk-8.0.482.8-hotspot\bin;S:\OracleXE213_Win64\dbhomeXE\bin;C:\Python312\Scripts\;C:\Python312\;C:\ProgramData\chocolateyC:\Users\prash\AppData\Roaming\Python\Python312\Scripts.;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files\Git LFS;C:\Strawberry\c\bin;C:\Strawberry\perl\site\bin;C:\Strawberry\perl\bin;S:\PostgreSQL\bin;C:\Users\prash\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\prash\AppData\Local\Programs\Python\Python311\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\prash\tools\apache-maven-3.9.9\bin;c:\Users\prash\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\debugCommand;c:\Users\prash\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\copilotCli;C:\Program Files\Eclipse Adoptium\jdk-8.0.482.8-hotspot\bin;S:\OracleXE213_Win64\dbhomeXE\bin;C:\Python312\Scripts\;C:\Python312\;C:\ProgramData\chocolateyC:\Users\prash\AppData\Roaming\Python\Python312\Scripts.;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files\Git LFS;C:\Strawberry\c\bin;C:\Strawberry\perl\site\bin;C:\Strawberry\perl\bin;S:\PostgreSQL\bin;C:\Users\prash\AppData\Local\Programs\Eclipse Adoptium\jdk-25.0.1.8-hotspot\bin;C:\Users\prash\AppData\Local\Microsoft\WindowsApps;C:\Users\prash\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\prash\AppData\Roaming\npm;C:\Users\prash\AppData\Local\Programs\Ollama;S:\cursor\resources;c:\Users\prash\.vscode\extensions\openai.chatgpt-26.318.11754-win32-x64\bin\windows-x86_64" "gcc -o conftest.exe -IC:/Ruby32-x64/include/ruby-3.2.0/x64-mingw-ucrt -IC:/Ruby32-x64/include/ruby-3.2.0/ruby/backward -IC:/Ruby32-x64/include/ruby-3.2.0 -I.  -DFD_SETSIZE=2048 -D_WIN32_WINNT=0x0600 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64  -O3 -fno-fast-math -fstack-protector-strong conftest.c  -L. -LC:/Ruby32-x64/lib -L. -pipe -s -fstack-protector-strong -Wl,--no-as-needed  -m64   -lx64-ucrt-ruby320  -lshell32 -lws2_32 -liphlpapi -limagehlp -lshlwapi -lbcrypt  "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <winsock2.h>
+4: #include <windows.h>
+5: int main(int argc, char **argv)
+6: {
+7:   return !!argv[argc];
+8: }
+/* end */
+
+PATH=".;C:/Ruby32-x64/lib;C:\Ruby32-x64\bin;C:\Ruby32-x64\msys64\ucrt64\bin;C:\Ruby32-x64\msys64\usr\bin;C:\Users\prash\OneDrive\Desktop\CRM_Project_Fixed\crm_backend_fixed\crm_fixed_backend\.gem\bin;C:\Ruby32-x64\bin;C:\Users\prash\.codex\tmp\arg0\codex-arg0iFSOyr;C:\Program Files\Eclipse Adoptium\jdk-17.0.18.8-hotspot\bin;C:\Program Files\Eclipse Adoptium\jdk-8.0.482.8-hotspot\bin;S:\OracleXE213_Win64\dbhomeXE\bin;C:\Python312\Scripts\;C:\Python312\;C:\ProgramData\chocolateyC:\Users\prash\AppData\Roaming\Python\Python312\Scripts.;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files\Git LFS;C:\Strawberry\c\bin;C:\Strawberry\perl\site\bin;C:\Strawberry\perl\bin;S:\PostgreSQL\bin;C:\Users\prash\AppData\Local\Programs\Python\Python311\Scripts\;C:\Users\prash\AppData\Local\Programs\Python\Python311\;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\prash\tools\apache-maven-3.9.9\bin;c:\Users\prash\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\debugCommand;c:\Users\prash\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\copilotCli;C:\Program Files\Eclipse Adoptium\jdk-8.0.482.8-hotspot\bin;S:\OracleXE213_Win64\dbhomeXE\bin;C:\Python312\Scripts\;C:\Python312\;C:\ProgramData\chocolateyC:\Users\prash\AppData\Roaming\Python\Python312\Scripts.;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files\nodejs\;C:\Program Files\Git\cmd;C:\Program Files\Git LFS;C:\Strawberry\c\bin;C:\Strawberry\perl\site\bin;C:\Strawberry\perl\bin;S:\PostgreSQL\bin;C:\Users\prash\AppData\Local\Programs\Eclipse Adoptium\jdk-25.0.1.8-hotspot\bin;C:\Users\prash\AppData\Local\Microsoft\WindowsApps;C:\Users\prash\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\prash\AppData\Roaming\npm;C:\Users\prash\AppData\Local\Programs\Ollama;S:\cursor\resources;c:\Users\prash\.vscode\extensions\openai.chatgpt-26.318.11754-win32-x64\bin\windows-x86_64" "gcc -o conftest.exe -IC:/Ruby32-x64/include/ruby-3.2.0/x64-mingw-ucrt -IC:/Ruby32-x64/include/ruby-3.2.0/ruby/backward -IC:/Ruby32-x64/include/ruby-3.2.0 -I.  -DFD_SETSIZE=2048 -D_WIN32_WINNT=0x0600 -D__MINGW_USE_VC2005_COMPAT -D_FILE_OFFSET_BITS=64  -O3 -fno-fast-math -fstack-protector-strong conftest.c  -L. -LC:/Ruby32-x64/lib -L. -pipe -s -fstack-protector-strong -Wl,--no-as-needed  -m64   -lx64-ucrt-ruby320  -lshell32 -lws2_32 -liphlpapi -limagehlp -lshlwapi -lbcrypt  "
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <winsock2.h>
+ 4: #include <windows.h>
+ 5: #include <ruby.h>
+ 6: 
+ 7: /*top*/
+ 8: extern int t(void);
+ 9: int main(int argc, char **argv)
+10: {
+11:   if (argc > 1000000) {
+12:     int (* volatile tp)(void)=(int (*)(void))&t;
+13:     printf("%d", (*tp)());
+14:   }
+15: 
+16:   return !!argv[argc];
+17: }
+18: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_ext_ractor_safe; return !p; }
+/* end */
+
+--------------------
+

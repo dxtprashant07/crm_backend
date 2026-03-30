@@ -1,0 +1,19 @@
+current directory: C:/Users/prash/OneDrive/Desktop/CRM_Project_Fixed/crm_backend_fixed/crm_fixed_backend/vendor/bundle/ruby/3.2.0/gems/cgi-0.5.1/ext/cgi/escape
+C:/Ruby32-x64/bin/ruby.exe extconf.rb
+creating Makefile
+
+current directory: C:/Users/prash/OneDrive/Desktop/CRM_Project_Fixed/crm_backend_fixed/crm_fixed_backend/vendor/bundle/ruby/3.2.0/gems/cgi-0.5.1/ext/cgi/escape
+make DESTDIR\= sitearchdir\=./.gem.20260324-19360-802zga sitelibdir\=./.gem.20260324-19360-802zga clean
+
+current directory: C:/Users/prash/OneDrive/Desktop/CRM_Project_Fixed/crm_backend_fixed/crm_fixed_backend/vendor/bundle/ruby/3.2.0/gems/cgi-0.5.1/ext/cgi/escape
+make DESTDIR\= sitearchdir\=./.gem.20260324-19360-802zga sitelibdir\=./.gem.20260324-19360-802zga
+generating escape-x64-mingw-ucrt.def
+compiling escape.c
+linking shared-object cgi/escape.so
+
+current directory: C:/Users/prash/OneDrive/Desktop/CRM_Project_Fixed/crm_backend_fixed/crm_fixed_backend/vendor/bundle/ruby/3.2.0/gems/cgi-0.5.1/ext/cgi/escape
+make DESTDIR\= sitearchdir\=./.gem.20260324-19360-802zga sitelibdir\=./.gem.20260324-19360-802zga install
+/usr/bin/install -c -m 0755 escape.so ./.gem.20260324-19360-802zga/cgi
+
+current directory: C:/Users/prash/OneDrive/Desktop/CRM_Project_Fixed/crm_backend_fixed/crm_fixed_backend/vendor/bundle/ruby/3.2.0/gems/cgi-0.5.1/ext/cgi/escape
+make DESTDIR\= sitearchdir\=./.gem.20260324-19360-802zga sitelibdir\=./.gem.20260324-19360-802zga clean
